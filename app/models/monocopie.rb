@@ -1,0 +1,2 @@
+class Monocopie < ApplicationRecord
+end
