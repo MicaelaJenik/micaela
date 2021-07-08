@@ -10,9 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_07_08_030014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "artworks", force: :cascade do |t|
+    t.string "title"
+    t.integer "year"
+    t.integer "height"
+    t.integer "width"
+    t.integer "depth"
+    t.string "technique"
+    t.text "about"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "monocopies", force: :cascade do |t|
+    t.string "title"
+    t.integer "year"
+    t.integer "height"
+    t.integer "width"
+    t.integer "depth"
+    t.string "technique"
+    t.text "about"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "papers", force: :cascade do |t|
+    t.string "title"
+    t.integer "year"
+    t.integer "height"
+    t.integer "width"
+    t.integer "depth"
+    t.string "technique"
+    t.text "about"
+    t.text "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
